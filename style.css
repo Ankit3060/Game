@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vH;
+}
+.dino{
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 114px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+}
+/* .dinoOver{
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 233px;
+    height: 114px;
+    position: absolute;
+    bottom: -125px;
+    left: 52px;
+} */
+.obstacle{
+    background-image: url(dragon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 166px;
+    height: 113px;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+.gameOver{
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    font-family: 'Lugrasimo', cursive;
+    text-align: center;
+    /* visibility: hidden; */
+    /* width: 0; */
+    /* transition:5px 1s ease-in 1s; */
+}
+
+#scoreCount{
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    color: rgb(185, 193, 193);
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Lugrasimo', cursive;
+    font-weight: bold;
+    width: 130px;
+}
+
+.animateDino{
+    animation:dino 0.8s linear;
+}
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom:300px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.obstacleAni{
+    animation: obstacleAni 2.5s linear infinite;
+}
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
